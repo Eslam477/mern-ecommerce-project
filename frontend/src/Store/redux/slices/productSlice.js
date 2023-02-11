@@ -8,21 +8,28 @@ export const getProductData = createAsyncThunk('product/getProductData', async (
     return axios.get(consts.server_url + `collection/products/${args.id}`).then((data) => {
         return data
     })
-
-
 })
-const initialState = { value: 0 };
+
+const initialState = {
+    productData: {
+    }
+};
 export const productSlice = createSlice({
     name: 'products',
     initialState,
     reducers: {
-        increment(state) {
-            state.value++
-        }
     },
     extraReducers: {
         [getProductData.pending]: (state, action) => {
-            console.log(action)
+            console.log('loading.....')
+        },
+        [getProductData.fulfilled]: (state, action) => {
+            state.productData.id = action.payload.data[0].id
+            state.productData.name = action.payload.data[0].name
+            state.productData.description = action.payload.data[0].description
+            state.productData.price = action.payload.data[0].price
+            state.productData.count = action.payload.data[0].count
+            console.log(action.payload.data)
         }
     }
 })

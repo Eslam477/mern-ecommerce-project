@@ -4,7 +4,6 @@ var getProduct = (req, res) => {
     res.json(result)
 }
 var getSingleProduct = (req, res) => {
-    console.log(req.params.id)
     var result = data.products.filter(product => {
         return product.id === req.params.id
     })
