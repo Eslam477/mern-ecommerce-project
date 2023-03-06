@@ -6,7 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import { BsFillCartFill } from 'react-icons/bs'
 import { AiFillPhone, AiFillMail } from 'react-icons/ai'
 import { ImLocation2 } from 'react-icons/im'
-const nav = () => {
+const _nav = () => {
+
     return (
         <nav>
             <Navbar className='upper_navbar'>
@@ -35,7 +36,8 @@ const nav = () => {
                             </form>
                         </Nav>
                         <Nav className='status'>
-                            <Nav.Item href="/cart"><Link to='/cart' className='linkDecorationNon'><BsFillCartFill /><br />Your Cart</Link></Nav.Item>
+                            <Nav.Item><Link to='/cart' className='linkDecorationNon'><BsFillCartFill /><br />Your Cart</Link></Nav.Item>
+                            <Nav.Item><Link to='/admin' className='linkDecorationNon'>Admin</Link></Nav.Item>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -55,4 +57,4 @@ const nav = () => {
     );
 }
 
-export default nav;
+export default _nav;
