@@ -1,14 +1,14 @@
 var data = {
     products: [
         {
-            id: '9nv3Ki',
+            id: '6408acdcd3ef3941c86f0491',
             name: 'ZOTAC Gaming MEK Hero G2 I2435F Gaming PC',
             description: 'ZOTAC Gaming MEK Hero G2 I2435F Gaming PC Desktop Intel 12th Gen Core i5 12400F, GeForce RTX 3050 8GB, 16GB 3200 MHz DDR4, 500GB SSD, WiFi + Bluetooth ‎- GH3050I2400F01BL-U-W11',
             price: 1099.99,
             count: 12
         },
         {
-            id: 'OL4NzM',
+            id: '6408adb2d3ef3941c86f0492',
             name: 'Philips Sonicare 4100 Power Toothbrush',
             description: 'Philips Sonicare 4100 Power Toothbrush, Rechargeable Electric Toothbrush with Pressure Sensor, White HX3681/23',
             price: 40,

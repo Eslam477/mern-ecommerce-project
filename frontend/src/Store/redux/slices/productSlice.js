@@ -5,7 +5,9 @@ import consts from '../../../consts.js'
 
 
 export const getProductData = createAsyncThunk('product/getProductData', async (args) => {
-    return axios.get(consts.server_url + `collection/products/${args.id}`).then((data) => {
+    const Url = `${consts.server_url}/products/${args.id}`
+    console.log("🚀 ~ file: productSlice.js:10 ~ getProductData ~ Url:", Url)
+    return axios.get(Url).then((data) => {
         return data
     })
 })
